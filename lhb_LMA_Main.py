@@ -16,6 +16,6 @@ import time
             
 if __name__ == '__main__':
 
-   
+    Phases.PHASE_I()
 
     print("\nTotal Program Time:",time.process_time())

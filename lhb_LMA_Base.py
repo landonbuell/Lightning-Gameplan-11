@@ -8,7 +8,6 @@ Game Plan Take 11
             #################
             #### IMPORTS ####
 
-import mas_raw
 import numpy as np
 import matplotlib.pyplot as plt
 import os 
@@ -140,30 +139,5 @@ def Extract_Files (directory,extension):
                 filelist.append(file)               # add to list of files           
     return filelist                                 # Return the list of files
 
-def Make_Sub_Dirs (path):
-    """
-    Creates a series of directories within a specified path
-    -------------------------------
-    path (str) : parent directory to create paths within
-    -------------------------------
-    returns a dictionary of of sub directory paths
-    """
-            #### Create all Sub dirs ####
-    passplots = path+'/NBEs/Plots'
-    passarrays = path+'/NBEs/Arrays'
-    failplots = path+'/Non-NBEs/Plots'
-    failarrays = path+'/Non-NBEs/Arrays'
-    paths = [passplots,passarrays,failplots,failarrays]
-    
-    for path in paths:                  # for each directory path
-        try:                            # try to create path:
-            os.makedirs(path)           # make the path (And other dirs)
-        except:                         # if failure,
-            pass                        # do nothing
 
-    dict = {'passplots':passplots,
-            'passarrays':passarrays,    
-            'failplots':failplots,
-            'failarrays':failarrays}    # create a dictionary of directory paths
-    return dict                         # return the dictionary
 

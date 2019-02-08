@@ -22,10 +22,10 @@ def PHASE_I ():
     inputted or defaulted to here. 
     """
     paths = Comp.Initialize()                   # Dictionary of important paths
-    filelist = Base.Extract_Files(paths['readdir'],'.chD')
+    filelist = Base.Extract_Files(paths['readdir'],'.txt')
     print("\nThere are",len(filelist),"files in the requested directory path.")
     print("Expected Computation time:")
     print("Between",int((len(filelist)*0.5)),\
         "and",int((len(filelist)*0.8)),"seconds")
 
-    return paths,bound,filelist
+    return paths,filelist
